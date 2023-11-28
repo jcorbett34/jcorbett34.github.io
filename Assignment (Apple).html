@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navigation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        nav {
+            background-color: #555;
+            overflow: hidden;
+            width: 100%;
+            display: flex; /* Use flexbox */
+        }
+
+        nav a {
+            flex: 1; /* Distribute available space evenly */
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        @media screen and (max-width: 600px) {
+            nav a {
+                flex: none; /* Reset flex property for smaller screens */
+                float: none;
+                display: block;
+                width: 100%;
+                text-align: left;
+            }
+        }
+
+        nav img {
+            max-width: 15px;
+        }
+
+        .hero-banner {
+            background-color: #fff;
+            color: #000;
+            text-align: center;
+            padding: 20px;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hero-banner img {
+            max-width: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 5px auto;
+        }
+
+        @media screen and (max-width: 600px) {
+            .hero-banner {
+                height: auto;
+            }
+        }  
+        
+        .hero-banner-black {
+            background-color: #000;
+            color: #fff;
+            height: 500px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 400px); 
+            gap: 20px;
+            padding: 20px;
+        }
+
+        
+        .grid-container img {
+            max-width: 200px;
+        }
+
+        .grid-item {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            justify-content: center; 
+        }
+
+
+        @media screen and (max-width: 600px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        p.small-font {
+            font-size: 14px;
+        }
+
+        
+        
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="#home"><img src="Images/logo.png" /></a>
+        <a href="#about">Mac</a>
+        <a href="#services">iPad</a>
+        <a href="#contact">iPhone</a>
+        <a href="#contact">Watch</a>
+        <a href="#contact">TV</a>
+        <a href="#contact">Music</a>
+        <a href="#contact">Support</a>
+    </nav>
+
+    <div class="hero-banner">
+        <h1>iPhone 11</h1>
+        <p><a href="www.example.com">Shop Now ></a></p>
+        <img src="Images/6.png">
+    </div>
+
+    <div class="hero-banner hero-banner-black">
+        <h1>iPhone 11 Pro</h1>
+        <h2>Pro cameras. Pro display. Pro performance.</h2>
+        <p class="small-font">From $24.95/mo or $599 with trade-in.</p>
+        <p><a href="www.example.com">Learn more > Buy ></a></p>
+        <img src="Images/5.png" style="min-width: 600px" />
+    </div>
+
+    <div class="grid-container">
+        <div class="grid-item"><h1>Mac</h1>
+            <p>Our most powerful pro lineup<br>ever. Ready for your best work<br>ever</p>
+            <p><a href="www.example.com">Learn more > Buy ></a></p><img src="Images/1.png"></div>
+        <div class="grid-item"><h1>iPad</h1>
+            <p>Like a computer. Unlike any<br>computer.</p>
+            <p><a href="www.example.com">Learn more > Buy ></a></p><img src="Images/2.png"></div>
+        <div class="grid-item"><h1>iPhone</h1><p>Just the right amount of<br>everything.</p>
+            <p><a href="www.example.com">Learn more > Buy ></a></p><img src="Images/3.png"></div>
+        <div class="grid-item"><h1>Watch</h1><p>You've never seen a watch like<br>this.</p>
+            <p><a href="www.example.com">Learn more > Buy ></a></p><img src="Images/4.png"></div>
+    </div>
+
+
+</body>
+
+</html>
